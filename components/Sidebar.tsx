@@ -27,7 +27,7 @@ export default function Sidebar() {
       
       {/* 印章展示区域 */}
       <div className="seal-display">
-        <img src="http://chagf.test.upcdn.net/logo.png" alt="印章" className="seal-image" style={{ width: '140px', height: '220px', objectFit: 'contain' }} />
+        <img src="/static/images/logo.png" alt="印章" className="seal-image" style={{ width: '140px', height: '220px', objectFit: 'contain' }} />
         <div className="seal-caption">/</div>
       </div>
       
