@@ -1837,7 +1837,7 @@ ul {
 .image-container {
   flex: 1;
   min-width: 0;
-  background-color: #f0e6d2;
+  background-color: #f9f5e7;
   box-shadow: 0 3px 15px rgba(138, 108, 90, 0.1);
   border-radius: 4px;
   overflow: hidden;
