@@ -444,7 +444,9 @@ ul {
 .main-content {
   margin-left: 300px;
   min-height: 100vh;
-  padding:  10px;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
 }
 
 /* 响应式设计 */
@@ -483,6 +485,8 @@ ul {
   .main-content {
     margin-left: 200px;
     padding: 20px 15px;
+    height: auto;
+    overflow: visible;
   }
 }
 
@@ -523,6 +527,8 @@ ul {
   .main-content {
     margin-left: 60px;
     padding: 20px 15px;
+    height: auto;
+    overflow: visible;
   }
   
   /* 卡片响应式 */
@@ -1811,41 +1817,110 @@ ul {
 /* 内容容器样式 - 用于并排显示目录和图片 */
 .content-container {
   display: flex;
+  flex-wrap: nowrap;
   gap: 30px;
   align-items: stretch;
   width: 100%;
-  max-width: 1200px;
+  max-width: none;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
+  height: 100%;
   float: left;
 }
 
 /* 古文雅集目录样式 */
 .directory-container {
-  flex: 1;
+  flex: 0 0 calc((100% - 260px - 60px) * 0.3);
   min-width: 0;
   background-color: #f9f5e7;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #d9c7a6;
-  padding: 25px;
+  padding: 20px;
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 图片展示区域样式 */
 .image-container {
-  flex: 1;
+  flex: 0 0 calc((100% - 260px - 60px) * 0.7);
   min-width: 0;
   background-color: #f9f5e7;
   box-shadow: 0 3px 15px rgba(138, 108, 90, 0.1);
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #d9c9b2;
-  padding: 25px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+/* 书法碑帖列表 */
+.stelae-container {
+  flex: 0 0 260px;
+  min-width: 0;
+  background-color: #f9f5e7;
+  box-shadow: 0 3px 15px rgba(138, 108, 90, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #d9c9b2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.stelae-title {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 22px;
+  color: #4c4a4a;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.stelae-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.stelae-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background: #f0e6d2;
+  border: 1px solid #d9c9b2;
+  transition: all 0.2s ease;
+}
+
+.stelae-item:hover {
+  background: #d9c9b2;
+  border-color: #b89f8e;
+}
+
+.stelae-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  color: #4c4a4a;
+}
+
+.stelae-author {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 13px;
+  color: #5d5c4c;
 }
 
 .image-gallery {
@@ -1853,6 +1928,27 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-height: 0;
+}
+
+.image-carousel {
+  height: 100%;
+}
+
+.image-carousel .swiper {
+  height: 100%;
+}
+
+.image-carousel .swiper-slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.image-carousel .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-image {
@@ -1875,11 +1971,16 @@ ul {
   }
   
   .directory-container,
-  .image-container {
+  .image-container,
+  .stelae-container {
     width: 100%;
   }
   
   .image-container {
+    margin-top: 20px;
+  }
+
+  .stelae-container {
     margin-top: 20px;
   }
 }
@@ -1890,7 +1991,7 @@ ul {
   font-family: 'Ma Shan Zheng', cursive;
   font-size: 26px;
   color: #4c4a4a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-align: center;
   position: relative;
   padding-bottom: 10px;
@@ -1927,6 +2028,10 @@ ul {
 .directory-main {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 6px;
 }
 
 .directory-chapter {

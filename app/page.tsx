@@ -1,3 +1,5 @@
+import ImageCarousel from '@/components/ImageCarousel';
+
 export default function HomePage() {
   return (
     <div className="main-content">
@@ -60,6 +62,24 @@ export default function HomePage() {
             </div>
             
             <div className="section-divider"></div>
+
+            <div className="directory-chapter">
+              <h2 className="chapter-title">
+                <span className="chapter-number">四</span>元明清文選
+              </h2>
+              <div className="chapter-content">
+                <ul className="directory-list">
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷十七</span>桃花源記·陶淵明</a></li>
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷十八</span>西廂記·王實甫</a></li>
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷十九</span>牡丹亭·湯顯祖</a></li>
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十</span>長生殿·洪昇</a></li>
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十一</span>聊齋誌異·蒲松齡</a></li>
+                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十二</span>紅樓夢·曹雪芹</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="section-divider"></div>
           </div>
         </div>
         
@@ -69,9 +89,90 @@ export default function HomePage() {
           <div className="corner-decoration corner-tr"></div>
           <div className="corner-decoration corner-bl"></div>
           <div className="corner-decoration corner-br"></div>
-          <div className="image-gallery">
-            <img src="/gallery/临江仙.jpg" alt="书法艺术" className="gallery-image" />
-          </div>
+          <ImageCarousel />
+        </div>
+
+        {/* 书法碑帖列表 */}
+        <div className="stelae-container">
+          <div className="corner-decoration corner-tl"></div>
+          <div className="corner-decoration corner-tr"></div>
+          <div className="corner-decoration corner-bl"></div>
+          <div className="corner-decoration corner-br"></div>
+          <h2 className="stelae-title">书法碑帖</h2>
+          <ul className="stelae-list">
+            <li className="stelae-item">
+              <span className="stelae-name">兰亭序</span>
+              <span className="stelae-author">王羲之</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">九成宫醴泉铭</span>
+              <span className="stelae-author">欧阳询</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">多宝塔碑</span>
+              <span className="stelae-author">颜真卿</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">玄秘塔碑</span>
+              <span className="stelae-author">柳公权</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">洛神赋十三行</span>
+              <span className="stelae-author">王献之</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">圣教序</span>
+              <span className="stelae-author">褚遂良</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">张迁碑</span>
+              <span className="stelae-author">东汉</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">礼器碑</span>
+              <span className="stelae-author">东汉</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">颜勤礼碑</span>
+              <span className="stelae-author">颜真卿</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">孔子庙堂碑</span>
+              <span className="stelae-author">虞世南</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">雁塔圣教序</span>
+              <span className="stelae-author">褚遂良</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">乙瑛碑</span>
+              <span className="stelae-author">东汉</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">曹全碑</span>
+              <span className="stelae-author">东汉</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">泰山刻石</span>
+              <span className="stelae-author">李斯</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">瘗鹤铭</span>
+              <span className="stelae-author">南朝</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">石门颂</span>
+              <span className="stelae-author">东汉</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">张猛龙碑</span>
+              <span className="stelae-author">北魏</span>
+            </li>
+            <li className="stelae-item">
+              <span className="stelae-name">峄山刻石</span>
+              <span className="stelae-author">李斯</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

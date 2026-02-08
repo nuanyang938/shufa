@@ -87,11 +87,3 @@ export function getAllTags(): string[] {
   return Array.from(tagsSet).sort();
 }
 
-/**
- * 根据标签获取文章
- */
-export function getPostsByTag(tag: string): Post[] {
-  const posts = getAllPosts();
-  return posts.filter((post) => post.tags.includes(tag));
-}
-

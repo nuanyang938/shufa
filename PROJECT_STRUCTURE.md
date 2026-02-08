@@ -32,17 +32,13 @@ ablog/
 ├── lib/                          # 工具函数库
 │   ├── posts.ts                 # 文章读取和解析模块
 │   ├── constants.ts             # 常量配置
-│   └── utils.ts                 # 通用工具函数
+│   └── gallery.ts               # 作品图片列表生成
 │
 ├── types/                        # TypeScript 类型定义
 │   └── index.ts                 # 类型定义文件
 │
-├── static/                       # 源文件（样式和图片）
-│   ├── style.css                # 主样式文件
-│   └── images/                  # 图片资源
-│
 ├── public/                       # Next.js 公共资源目录
-│   ├── static/                  # 静态资源（复制自 static）
+│   ├── static/                  # 静态样式与图像
 │   │   ├── style.css
 │   │   └── images/
 │   └── gallery/                 # 画廊图片
@@ -65,7 +61,12 @@ ablog/
 - `getPostBySlug(slug)` - 根据 slug 获取单篇文章（包含 HTML 内容）
 - `getAllPosts()` - 获取所有文章（按日期降序排列）
 - `getAllTags()` - 获取所有标签（去重）
-- `getPostsByTag(tag)` - 根据标签筛选文章
+
+### lib/gallery.ts
+
+负责从 `public/gallery` 目录读取图片，并为前端提供可渲染的 metadata：
+
+- `getAllGalleryImages()` - 枚举允许的图片扩展名并返回图片路径、名称、alt 等信息
 
 ### app/blog/page.tsx
 

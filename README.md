@@ -31,10 +31,10 @@ ablog/
 │   └── Layout.tsx         # 布局组件
 ├── content/              # 内容目录
 │   └── posts/            # Markdown 文章
-├── lib/                  # 工具函数
+├── lib/                  # 工具函数与数据读取
 │   ├── posts.ts          # 文章读取和解析
 │   ├── constants.ts      # 常量配置
-│   └── utils.ts          # 工具函数
+│   └── gallery.ts        # 作品集图片索引
 ├── types/                # TypeScript 类型定义
 │   └── index.ts
 ├── public/               # 静态资源
@@ -106,7 +106,6 @@ summary: 文章摘要
 - `getPostBySlug(slug)` - 根据 slug 获取单篇文章
 - `getAllPosts()` - 获取所有文章（按日期降序）
 - `getAllTags()` - 获取所有标签
-- `getPostsByTag(tag)` - 根据标签获取文章
 
 ### lib/constants.ts
 
@@ -115,13 +114,11 @@ summary: 文章摘要
 - `SITE_CONFIG` - 网站基本信息
 - `ROUTES` - 路由常量
 
-### lib/utils.ts
+### lib/gallery.ts
 
-通用工具函数：
+作品集相关功能：
 
-- `formatDate()` - 日期格式化
-- `generateSlug()` - 生成 URL slug
-- `truncateText()` - 文本截取
+- `getAllGalleryImages()` - 枚举 `public/gallery` 目录下的图片并返回可直接渲染的信息（src、alt、filename）
 
 ## 🎨 页面说明
 
