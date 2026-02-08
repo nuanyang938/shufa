@@ -61,25 +61,6 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="section-divider"></div>
-
-            <div className="directory-chapter">
-              <h2 className="chapter-title">
-                <span className="chapter-number">四</span>元明清文選
-              </h2>
-              <div className="chapter-content">
-                <ul className="directory-list">
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷十七</span>桃花源記·陶淵明</a></li>
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷十八</span>西廂記·王實甫</a></li>
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷十九</span>牡丹亭·湯顯祖</a></li>
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十</span>長生殿·洪昇</a></li>
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十一</span>聊齋誌異·蒲松齡</a></li>
-                  <li><a href="#" className="directory-link"><span className="volume-label">卷二十二</span>紅樓夢·曹雪芹</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="section-divider"></div>
           </div>
         </div>
         
@@ -129,10 +110,6 @@ export default function HomePage() {
               <span className="stelae-author">东汉</span>
             </li>
             <li className="stelae-item">
-              <span className="stelae-name">礼器碑</span>
-              <span className="stelae-author">东汉</span>
-            </li>
-            <li className="stelae-item">
               <span className="stelae-name">颜勤礼碑</span>
               <span className="stelae-author">颜真卿</span>
             </li>
@@ -157,20 +134,8 @@ export default function HomePage() {
               <span className="stelae-author">李斯</span>
             </li>
             <li className="stelae-item">
-              <span className="stelae-name">瘗鹤铭</span>
-              <span className="stelae-author">南朝</span>
-            </li>
-            <li className="stelae-item">
-              <span className="stelae-name">石门颂</span>
-              <span className="stelae-author">东汉</span>
-            </li>
-            <li className="stelae-item">
               <span className="stelae-name">张猛龙碑</span>
               <span className="stelae-author">北魏</span>
-            </li>
-            <li className="stelae-item">
-              <span className="stelae-name">峄山刻石</span>
-              <span className="stelae-author">李斯</span>
             </li>
           </ul>
         </div>
