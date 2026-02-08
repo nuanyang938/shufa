@@ -1818,7 +1818,7 @@ ul {
 .content-container {
   display: flex;
   flex-wrap: nowrap;
-  gap: 30px;
+  gap: 20px;
   align-items: stretch;
   width: 100%;
   max-width: none;
